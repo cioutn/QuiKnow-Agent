@@ -1,17 +1,3 @@
-"""项目主入口 CLI。
-
-子命令：
-  ask                进入交互问答（默认）
-  build [--path P]   启动文档/数据构建任务（调用 start_document_build）
-  status --job ID    查询构建任务状态（调用 get_job_status）
-  tree               触发目录聚类建树（调用 directory_tree_builder）
-
-示例：
-  python main.py ask
-  python main.py build --path ./docs
-  python main.py status --job 123e4567-...
-  python main.py tree
-"""
 import asyncio, json, argparse, sys, inspect, time
 from ask import AskAgent
 from ask.model import init_chat_model
